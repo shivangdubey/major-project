@@ -1,2 +1,1 @@
-# major-project
-BPIT final project
+# BPIT rocks 

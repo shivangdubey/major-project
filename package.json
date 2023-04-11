@@ -1,0 +1,45 @@
+{
+  "name": "ssapi",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@blockly/theme-modern": "^3.0.7",
+    "@testing-library/jest-dom": "*",
+    "@testing-library/react": "*",
+    "@testing-library/user-event": "*",
+    "blockly": "*",
+    "react": "*",
+    "react-blockly": "*",
+    "react-dnd": "*",
+    "react-dom": "*",
+    "react-icons": "*",
+    "react-router-dom": "*",
+    "react-scripts": "*",
+    "serialport": "*",
+    "web-vitals": "*"
+  },
+  "scripts": {
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
