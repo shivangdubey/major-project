@@ -2,7 +2,7 @@ import * as Blockly from "blockly";
 import "blockly/python";
 
 Blockly.Blocks["new_boundary_function"] = {
-  init: function () {
+  init: function() {
     this.appendDummyInput().appendField(
       new Blockly.FieldTextInput("Boundary Function Name"),
       "Name"
@@ -12,5 +12,5 @@ Blockly.Blocks["new_boundary_function"] = {
     this.setColour(315);
     this.setTooltip("");
     this.setHelpUrl("");
-  },
+  }
 };

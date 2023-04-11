@@ -5,8 +5,8 @@ import * as Blockly from "blockly";
 import "../css/blocks.css";
 import "./custom_blocks";
 
-import workspaceConfig from '../config/workspaceConfig';
-import toolboxCategories from '../config/toolboxCategories';
+import workspaceConfig from "../config/workspaceConfig";
+import toolboxCategories from "../config/toolboxCategories";
 
 export default function App() {
   const [json, setJson] = useState("");

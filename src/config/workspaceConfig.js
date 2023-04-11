@@ -5,15 +5,15 @@ const blocklyConfig = {
     spacing: 10,
     length: 5,
     colour: "#ccc",
-    snap: true,
+    snap: true
   },
   move: {
     scrollbars: {
       horizontal: true,
-      vertical: true,
+      vertical: true
     },
     drag: true,
-    wheel: false,
+    wheel: false
   },
   zoom: {
     controls: true,
@@ -22,7 +22,7 @@ const blocklyConfig = {
     maxScale: 3,
     minScale: 0.3,
     scaleSpeed: 1.2,
-    pinch: true,
+    pinch: true
   },
   trashcan: false,
   theme: {
@@ -35,11 +35,11 @@ const blocklyConfig = {
       flyoutForegroundColour: "#fff",
       flyoutOpacity: 0.9,
       scrollbarColour: "#888888",
-      scrollbarOpacity: 0.7,
+      scrollbarOpacity: 0.7
     },
     fontStyle: { family: "Georgia, serif", weight: "bold", size: 12 },
-    startHats: true,
-  },
+    startHats: true
+  }
 };
 
 export default blocklyConfig;

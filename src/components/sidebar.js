@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaCog,
@@ -7,18 +7,18 @@ import {
   FaFont,
   FaList,
   FaDatabase,
-  FaPython,
+  FaPython
 } from "react-icons/fa";
 import { MdFunctions } from "react-icons/md";
-import LogicSubmenu from './menu/logic';
+import LogicSubmenu from "./menu/logic";
 
 import "../css/sidebar.css";
 
 const Sidebar = () => {
-    const [showLogicSubmenu, setLogicShowSubmenu] = useState(false);
-    const toggleSubmenu = () => {
-        setLogicShowSubmenu(!showLogicSubmenu);
-    };
+  const [showLogicSubmenu, setLogicShowSubmenu] = useState(false);
+  const toggleSubmenu = () => {
+    setLogicShowSubmenu(!showLogicSubmenu);
+  };
   return (
     <div className="sidebar">
       <Link to="#" className="sidebar-button">
@@ -26,7 +26,7 @@ const Sidebar = () => {
           <FaCog className="sidebar-icon" />
           Logic
         </div>
-          {showLogicSubmenu && <LogicSubmenu />}
+        {showLogicSubmenu && <LogicSubmenu />}
       </Link>
       <Link to="#" className="sidebar-button">
         <div className="sidebar-pill">

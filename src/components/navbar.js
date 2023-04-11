@@ -7,7 +7,7 @@ import {
   FaSitemap,
   FaNetworkWired,
   FaEye,
-  FaSearch,
+  FaSearch
 } from "react-icons/fa";
 
 const Navbar = () => {
@@ -50,7 +50,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = event => {
       if (
         popupRef.current &&
         !popupRef.current.contains(event.target) &&
@@ -125,7 +125,7 @@ const Navbar = () => {
                   className="popup-network-input"
                   id="address"
                   value={address}
-                  onChange={(e) => setAddress(e.target.value)}
+                  onChange={e => setAddress(e.target.value)}
                 />
                 <label htmlFor="password" className="popup-network-label">
                   Password
@@ -136,7 +136,7 @@ const Navbar = () => {
                     className="popup-network-password-input"
                     id="password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={e => setPassword(e.target.value)}
                   />
                   <FaEye
                     className="popup-network-password-icon"

@@ -8,37 +8,37 @@ const toolboxCategories = {
       contents: [
         {
           kind: "block",
-          type: "controls_if",
+          type: "controls_if"
         },
         {
           kind: "block",
-          type: "logic_compare",
+          type: "logic_compare"
         },
         {
           kind: "block",
-          type: "logic_operation",
+          type: "logic_operation"
         },
         {
           kind: "block",
-          type: "logic_boolean",
+          type: "logic_boolean"
         },
         {
           kind: "block",
-          type: "logic_negate",
+          type: "logic_negate"
         },
         {
           kind: "block",
-          type: "logic_null",
+          type: "logic_null"
         },
         {
           kind: "block",
-          type: "logic_boolean",
+          type: "logic_boolean"
         },
         {
           kind: "block",
-          type: "logic_ternary",
-        },
-      ],
+          type: "logic_ternary"
+        }
+      ]
     },
     {
       kind: "category",
@@ -47,29 +47,29 @@ const toolboxCategories = {
       contents: [
         {
           kind: "block",
-          type: "controls_repeat_ext",
+          type: "controls_repeat_ext"
         },
         {
           kind: "block",
-          type: "controls_repeat",
+          type: "controls_repeat"
         },
         {
           kind: "block",
-          type: "controls_whileUntil",
+          type: "controls_whileUntil"
         },
         {
           kind: "block",
-          type: "controls_for",
+          type: "controls_for"
         },
         {
           kind: "block",
-          type: "controls_forEach",
+          type: "controls_forEach"
         },
         {
           kind: "block",
-          type: "controls_flow_statements",
-        },
-      ],
+          type: "controls_flow_statements"
+        }
+      ]
     },
     {
       kind: "category",
@@ -78,53 +78,53 @@ const toolboxCategories = {
       contents: [
         {
           kind: "block",
-          type: "text",
+          type: "text"
         },
         {
           kind: "block",
-          type: "text_multiline",
+          type: "text_multiline"
         },
         {
           kind: "block",
-          type: "text_join",
+          type: "text_join"
         },
         {
           kind: "block",
-          type: "text_length",
+          type: "text_length"
         },
         {
           kind: "block",
-          type: "text_append",
+          type: "text_append"
         },
         {
           kind: "block",
-          type: "text_isEmpty",
+          type: "text_isEmpty"
         },
         {
           kind: "block",
-          type: "text_indexOf",
+          type: "text_indexOf"
         },
         {
           kind: "block",
-          type: "text_charAt",
+          type: "text_charAt"
         },
         {
           kind: "block",
-          type: "text_getSubstring",
+          type: "text_getSubstring"
         },
         {
           kind: "block",
-          type: "text_changeCase",
+          type: "text_changeCase"
         },
         {
           kind: "block",
-          type: "text_trim",
+          type: "text_trim"
         },
         {
           kind: "block",
-          type: "text_count",
-        },
-      ],
+          type: "text_count"
+        }
+      ]
     },
     {
       kind: "category",
@@ -133,18 +133,17 @@ const toolboxCategories = {
       contents: [
         {
           kind: "block",
-          type: "math_round",
+          type: "math_round"
         },
         {
           kind: "block",
-          type: "math_number",
+          type: "math_number"
         },
         {
           kind: "block",
-          type: "math_arithmetic",
-        },
-        
-      ],
+          type: "math_arithmetic"
+        }
+      ]
     },
     {
       kind: "category",
@@ -153,55 +152,55 @@ const toolboxCategories = {
       contents: [
         {
           kind: "block",
-          type: "lists_create_empty",
+          type: "lists_create_empty"
         },
         {
           kind: "block",
-          type: "lists_create_with",
+          type: "lists_create_with"
         },
         {
           kind: "block",
-          type: "lists_repeat",
+          type: "lists_repeat"
         },
         {
           kind: "block",
-          type: "lists_length",
+          type: "lists_length"
         },
         {
           kind: "block",
-          type: "lists_isEmpty",
+          type: "lists_isEmpty"
         },
         {
           kind: "block",
-          type: "lists_getIndex",
+          type: "lists_getIndex"
         },
         {
           kind: "block",
-          type: "lists_indexOf",
+          type: "lists_indexOf"
         },
         {
           kind: "block",
-          type: "lists_setIndex",
+          type: "lists_setIndex"
         },
         {
           kind: "block",
-          type: "lists_getSublist",
+          type: "lists_getSublist"
         },
         {
           kind: "block",
-          type: "lists_split",
+          type: "lists_split"
         },
         {
           kind: "block",
-          type: "lists_sort",
-        },
-      ],
+          type: "lists_sort"
+        }
+      ]
     },
     {
       kind: "category",
       name: "Variables",
       colour: "#FF8C1A",
-      custom: "VARIABLE",
+      custom: "VARIABLE"
     },
     {
       kind: "category",
@@ -210,15 +209,15 @@ const toolboxCategories = {
       contents: [
         {
           kind: "block",
-          type: "procedures_defnoreturn",
+          type: "procedures_defnoreturn"
         },
         {
           kind: "block",
-          type: "procedures_defreturn",
-        },
-      ],
-    },
-  ],
+          type: "procedures_defreturn"
+        }
+      ]
+    }
+  ]
 };
 
 export default toolboxCategories;
