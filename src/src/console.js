@@ -7,17 +7,17 @@ const Console = () => {
   const [input, setInput] = useState(""); // State for user input
 
   // Handler for handling user input
-  const handleInput = e => {
+  const handleInput = (e) => {
     setInput(e.target.value);
   };
 
   // Handler for handling Enter key press
-  const handleEnterKeyPress = e => {
+  const handleEnterKeyPress = (e) => {
     if (e.key === "Enter") {
       // Add user input to terminal output
-      setOutput(prevOutput => [
+      setOutput((prevOutput) => [
         ...prevOutput,
-        { type: "input", content: `> ${input}` }
+        { type: "input", content: `> ${input}` },
       ]);
       // Handle the command based on input value
       handleCommand(input);
@@ -27,13 +27,13 @@ const Console = () => {
   };
 
   // Handler for handling commands
-  const handleCommand = command => {
+  const handleCommand = (command) => {
     // You can implement your own logic for handling commands here
     // For example, you can update the terminal output based on the command
     // and perform corresponding actions or show results
-    setOutput(prevOutput => [
+    setOutput((prevOutput) => [
       ...prevOutput,
-      { type: "output", content: `Command: ${command}` }
+      { type: "output", content: `Command: ${command}` },
     ]);
   };
 

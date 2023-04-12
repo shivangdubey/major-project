@@ -1,10 +1,10 @@
 /* paperBackground.css */
 .paper-background {
-  background-color: #f2f2f2;
-  background-image: radial-gradient(#ddd 1px, transparent 1px),
+    background-color: #f2f2f2;
+    background-image: radial-gradient(#ddd 1px, transparent 1px),
     radial-gradient(#ddd 1px, transparent 1px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
-  height: 100vh;
-  overflow: auto;
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    height: 100vh;
+    overflow: auto;
 }

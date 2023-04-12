@@ -32,10 +32,6 @@ const toolboxCategories = {
         },
         {
           kind: "block",
-          type: "logic_boolean"
-        },
-        {
-          kind: "block",
           type: "logic_ternary"
         }
       ]
@@ -68,7 +64,7 @@ const toolboxCategories = {
         {
           kind: "block",
           type: "controls_flow_statements"
-        }
+        },
       ]
     },
     {
@@ -142,6 +138,46 @@ const toolboxCategories = {
         {
           kind: "block",
           type: "math_arithmetic"
+        },
+        {
+          kind: "block",
+          type: "math_single"
+        },
+        {
+          kind: "block",
+          type: "math_trig"
+        },
+        {
+          kind: "block",
+          type: "math_constant"
+        },
+        {
+          kind: "block",
+          type: "math_number_property"
+        },
+        {
+          kind: "block",
+          type: "math_on_list"
+        },
+        {
+          kind: "block",
+          type: "math_modulo"
+        },
+        {
+          kind: "block",
+          type: "math_constrain"
+        },
+        {
+          kind: "block",
+          type: "math_random_int"
+        },
+        {
+          kind: "block",
+          type: "math_random_float"
+        },
+        {
+          kind: "math_atan2",
+          type: "math_random_float"
         }
       ]
     },
@@ -153,6 +189,10 @@ const toolboxCategories = {
         {
           kind: "block",
           type: "lists_create_empty"
+        },
+        {
+          kind: "block",
+          type: "lists_reverse"
         },
         {
           kind: "block",
@@ -214,6 +254,26 @@ const toolboxCategories = {
         {
           kind: "block",
           type: "procedures_defreturn"
+        },
+        {
+          kind: "block",
+          type: "procedures_mutatorcontainer"
+        },
+        {
+          kind: "block",
+          type: "procedures_mutatorarg"
+        },
+        {
+          kind: "block",
+          type: "procedures_callnoreturn"
+        },
+        {
+          kind: "block",
+          type: "procedures_callreturn"
+        },
+        {
+          kind: "block",
+          type: "procedures_ifreturn"
         }
       ]
     }

@@ -1,3 +1,16 @@
-.fill-height {
+.blockly-workspace {
   height: calc(100vh - 55px);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.blockly-container {
+  flex: 70%;
+}
+
+.ace-container {
+  flex: 30%;
 }
