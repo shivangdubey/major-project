@@ -1,1 +1,3 @@
-# BPIT rocks 
+# BPIT rocks
+
+Major Project
