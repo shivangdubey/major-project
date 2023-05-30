@@ -26,14 +26,14 @@ const blocklyConfig = {
   },
   trashcan: false,
   theme: {
-    base: Blockly.Themes.Classic,
+    base: Blockly.Themes.Zelos,
     componentStyles: {
       workspaceBackgroundColour: "#f2f2f2",
       toolboxBackgroundColour: "#2e2e2e",
       toolboxForegroundColour: "#fff",
       flyoutBackgroundColour: "#444",
       flyoutForegroundColour: "#fff",
-      flyoutOpacity: 0.9,
+      flyoutOpacity: 1,
       scrollbarColour: "#888888",
       scrollbarOpacity: 0.7,
     },
