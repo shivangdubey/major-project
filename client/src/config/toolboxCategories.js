@@ -289,6 +289,17 @@ const toolboxCategories = {
         },
       ],
     },
+    {
+      kind: "category",
+      name: "Arduino",
+      color: 210,
+      contents: [
+        {
+          kind: "block",
+          type: "board_base_inout_buildin_led"
+        },
+      ],
+    },
   ],
 };
 

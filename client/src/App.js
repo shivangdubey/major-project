@@ -16,7 +16,6 @@ export const UserContext = React.createContext("");
 
 const App = () => {
   const [json, setJson] = useState("");
-  const [javascriptCode, setJavascriptCode] = useState("");
   const [pythonCode, setPythonCode] = useState("");
   let [output, setOutput] = useState([]); // State for terminal output
   let [input, setInput] = useState(""); // State for user input
@@ -28,8 +27,6 @@ const App = () => {
           value={{
             json,
             setJson,
-            javascriptCode,
-            setJavascriptCode,
             pythonCode,
             setPythonCode,
             output,

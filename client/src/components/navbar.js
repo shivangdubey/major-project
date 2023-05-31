@@ -45,12 +45,11 @@ const Navbar = () => {
     setShowPopup(false);
     setNetworkPopup(false);
     setBluetoothPopup(false);
-
   };
 
   const handleNetworkOptionClick = () => {
     setAddress("ws://192.168.0.35:8266/");
-    setPassword("ssapi");
+    setPassword("cloudBlock");
     setNetworkPopup(true);
     setBluetoothPopup(false);
   };
@@ -85,7 +84,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="navbar-logo">SSApi</div>
+      <div className="navbar-logo">cloudBlock</div>
       <div className="navbar-buttons">
         <Link
           to="/blocks"
@@ -122,21 +121,24 @@ const Navbar = () => {
               <FaBluetooth className="popup-option-icon" /> Bluetooth
             </div>
             {showPopup && showBluetoothPopup && (
-                <div className="popup-network" ref={popupRef}>
-                  <label htmlFor="address" className="popup-network-label">
-                    Address
-                  </label>
-                  <input
-                      type="text"
-                      className="popup-network-input"
-                      id="address"
-                      value={bluetoothAddress}
-                      onChange={(e) => setBluetoothAddress(e.target.value)}
-                  />
-                  <div className="popup-network-scan" onClick={handleBluetoothConnectClick}>
-                    <FaLink className="popup-network-scan-icon" /> Connect Device
-                  </div>
+              <div className="popup-network" ref={popupRef}>
+                <label htmlFor="address" className="popup-network-label">
+                  Address
+                </label>
+                <input
+                  type="text"
+                  className="popup-network-input"
+                  id="address"
+                  value={bluetoothAddress}
+                  onChange={(e) => setBluetoothAddress(e.target.value)}
+                />
+                <div
+                  className="popup-network-scan"
+                  onClick={handleBluetoothConnectClick}
+                >
+                  <FaLink className="popup-network-scan-icon" /> Connect Device
                 </div>
+              </div>
             )}
             <div className="popup-option" onClick={() => handleSerialClick()}>
               <FaSitemap className="popup-option-icon" /> Serial
