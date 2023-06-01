@@ -1,3 +1,5 @@
+import "./customBlocks";
+
 const toolboxCategories = {
   kind: "categoryToolbox",
   contents: [
@@ -296,7 +298,11 @@ const toolboxCategories = {
       contents: [
         {
           kind: "block",
-          type: "board_base_inout_buildin_led"
+          type: "arduinoBuiltInLed",
+        },
+        {
+          kind: "block",
+          type: "arduino_digital_write",
         },
       ],
     },

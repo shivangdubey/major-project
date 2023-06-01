@@ -1,6 +1,5 @@
 import React, {useContext} from "react";
 import {BlocklyWorkspace} from "react-blockly";
-import Blockly from "blockly/";
 import {pythonGenerator} from "blockly/python";
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-javascript";

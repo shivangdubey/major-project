@@ -26,7 +26,7 @@ const blocklyConfig = {
   },
   trashcan: false,
   theme: {
-    base: Blockly.Themes.Zelos,
+    base: Blockly.Themes.Classic,
     componentStyles: {
       workspaceBackgroundColour: "#f2f2f2",
       toolboxBackgroundColour: "#2e2e2e",

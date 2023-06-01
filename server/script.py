@@ -1,2 +1,1 @@
-for count in range(10):
-  print('test')
+print('testing test ok'.rindex('ok'))
