@@ -293,7 +293,7 @@ const toolboxCategories = {
     },
     {
       kind: "category",
-      name: "Arduino",
+      name: "Base",
       color: 210,
       contents: [
         {
@@ -303,6 +303,37 @@ const toolboxCategories = {
         {
           kind: "block",
           type: "arduino_digital_write",
+        },
+        {
+          kind: "block",
+          type: "arduinoDigitalRead",
+        },
+        {
+          kind: "block",
+          type: "arduino_pin_mode",
+        },
+        {
+          kind: "block",
+          type: "arduino_analog_write",
+        },
+        {
+          kind: "block",
+          type: "arduinoDigitalWrite",
+        },
+        {
+          kind: "block",
+          type: "arduinoTone",
+        },
+      ],
+    },
+    {
+      kind: "category",
+      name: "Serial",
+      color: 210,
+      contents: [
+        {
+          kind: "block",
+          type: "arduino_serial_init",
         },
       ],
     },
