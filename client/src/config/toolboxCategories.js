@@ -333,7 +333,11 @@ const toolboxCategories = {
       contents: [
         {
           kind: "block",
-          type: "arduino_serial_init",
+          type: "boardSerialInit",
+        },
+        {
+          kind: "block",
+          type: "boardSerialPrint",
         },
       ],
     },

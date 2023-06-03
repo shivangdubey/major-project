@@ -264,39 +264,51 @@ pythonGenerator["arduinoTone"] = function (block) {
   return `board.digital[${pin}].write(1)\nboard.digital[${pin}].mode = pyfirmata.PWM\nboard.digital[${pin}].write({ frequency: ${frequency}, duty_cycle: 0.5, duration: ${duration} })\n`;
 };
 
-// serial // serial // serial
-
-Blockly.Blocks["arduino_serial_init"] = {
-  init: function () {
-    this.appendDummyInput().appendField("Arduino Serial Initialize");
-    this.appendValueInput("port").setCheck("String").appendField("Port");
-    this.appendValueInput("baudrate")
-      .setCheck("Number")
-      .appendField("Baud Rate");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(230);
-    this.setTooltip("Initialize the serial connection with Arduino");
-    this.setHelpUrl("");
-  },
+// Define the custom block for initializing serial communication on a board
+Blockly.Blocks["boardSerialInit"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("Initialize Serial Communication")
+            .appendField("Baud Rate")
+            .appendField(
+                new Blockly.FieldNumber(9600, 0),
+                "BAUD_RATE"
+            );
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour("#66c2a5");
+        this.setTooltip("Initialize serial communication on the board");
+        this.setHelpUrl("");
+    },
 };
 
-pythonGenerator["arduino_serial_init"] = function (block) {
-  var value_port = pythonGenerator.valueToCode(
-    block,
-    "port",
-    pythonGenerator.ORDER_ATOMIC
-  );
-  var value_baudrate = pythonGenerator.valueToCode(
-    block,
-    "baudrate",
-    pythonGenerator.ORDER_ATOMIC
-  );
+// Define the generator function for the custom block
+pythonGenerator["boardSerialInit"] = function (block) {
+    const baudRate = block.getFieldValue("BAUD_RATE");
 
-  let code = "";
-  code += `board_serial = board.serial\n`;
-  code += `board_serial.baudrate = ${value_baudrate}\n`;
-  code += `board_serial.timeout = 1\n`;
+    // Initialize the serial communication with the specified baud rate
+    return "board.serial_init(" + baudRate + ")\n";
+};
 
-  return code;
+
+// Define the custom block for serial printing
+Blockly.Blocks["boardSerialPrint"] = {
+    init: function () {
+        this.appendValueInput("DATA")
+            .setCheck(null)
+            .appendField("Serial Print");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour("#66c2a5");
+        this.setTooltip("Print data to the serial monitor");
+        this.setHelpUrl("");
+    },
+};
+
+// Define the generator function for the custom block
+pythonGenerator["boardSerialPrint"] = function (block) {
+    const data = pythonGenerator.valueToCode(block, "DATA", pythonGenerator.ORDER_ATOMIC);
+
+    // Generate the code for serial printing
+    return "board.serial_print(" + data + ")\n";
 };
