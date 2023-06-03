@@ -8,14 +8,14 @@ Blockly.Blocks["arduinoBuiltInLed"] = {
       .appendField("Control Arduino Built-in LED")
       .appendField(
         new Blockly.FieldDropdown([
-          ["ON", 1],
-          ["OFF", 0],
+          ["ON", "1"],
+          ["OFF", "0"],
         ]),
         "STATE"
       );
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour("#66c2a5");
     this.setTooltip("Control the Arduino's built-in LED");
     this.setHelpUrl("");
   },
@@ -55,14 +55,14 @@ Blockly.Blocks["arduino_digital_write"] = {
       .appendField("to")
       .appendField(
         new Blockly.FieldDropdown([
-          ["HIGH", 1],
-          ["LOW", 0],
+          ["HIGH", "1"],
+          ["LOW", "0"],
         ]),
         "STATE"
       );
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour("#66c2a5");
     this.setTooltip("Set the state of a digital pin on the Arduino board");
     this.setHelpUrl("");
   },
@@ -100,7 +100,7 @@ Blockly.Blocks["arduinoDigitalRead"] = {
         "PIN"
       );
     this.setOutput(true, "Boolean");
-    this.setColour(230);
+    this.setColour("#66c2a5");
     this.setTooltip(
       "Reads the value of a digital input pin on the Arduino board"
     );
@@ -148,7 +148,7 @@ Blockly.Blocks["arduino_pin_mode"] = {
       );
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour("#66c2a5");
     this.setTooltip("");
     this.setHelpUrl("");
   },
@@ -176,7 +176,7 @@ Blockly.Blocks["arduino_analog_write"] = {
       .appendField("Value (0-5)");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour("#66c2a5");
     this.setTooltip("Control the analog output of an Arduino pin");
     this.setHelpUrl("https://www.arduino.cc/en/Reference/AnalogWrite");
   },
@@ -206,7 +206,7 @@ Blockly.Blocks["arduinoDigitalWrite"] = {
     this.appendValueInput("STATE").setCheck("Boolean").appendField("State");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour("#66c2a5");
     this.setTooltip("Write a digital state to an Arduino pin");
     this.setHelpUrl("");
   },
@@ -236,7 +236,7 @@ Blockly.Blocks["arduinoTone"] = {
       .appendField("for duration");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour("#66c2a5");
     this.setTooltip("Generate a tone on the Arduino board.");
     this.setHelpUrl(
       "https://pyfirmata.readthedocs.io/en/latest/pyfirmata.html#pyfirmata.ArduinoMega.tone"

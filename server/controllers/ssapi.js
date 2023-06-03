@@ -5,18 +5,32 @@ const { spawn } = require("child_process");
 
 module.exports = {
   async runPythonCode(req, res) {
+    let path = "./script.py";
     let pythonCode = req.body.pythonCode;
     try {
-      fs.writeFile("./script.py", pythonCode, (err) => {
+      fs.readFile("./pfirmata.py", "utf8", (err, data) => {
         if (err) throw err;
+
+        fs.writeFile(path, data, (err) => {
+          if (err) throw err;
+          fs.appendFile(path, pythonCode, (err) => {
+            if (err) throw err;
+          });
+        });
       });
 
-      let resp = await PythonShell.run("./script.py");
+      let resp = await PythonShell.run(path);
+
+      fs.unlink(path, (err) => {
+        if (err) {
+          throw err;
+        }
+      });
 
       res.json({
         code: status.SUCCESSFUL,
         status: true,
-        resp: resp,
+        resp: resp.length > 0 ? resp : "OK",
       });
     } catch (e) {
       console.error(e);

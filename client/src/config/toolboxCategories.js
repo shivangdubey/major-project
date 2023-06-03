@@ -6,7 +6,7 @@ const toolboxCategories = {
     {
       kind: "category",
       name: "Logic",
-      colour: "#5C81A6",
+      colour: "#9e0142",
       contents: [
         {
           kind: "block",
@@ -41,7 +41,7 @@ const toolboxCategories = {
     {
       kind: "category",
       name: "Loops",
-      colour: "#FFAB19",
+      colour: "#d53e4f",
       contents: [
         {
           kind: "block",
@@ -72,7 +72,7 @@ const toolboxCategories = {
     {
       kind: "category",
       name: "Text",
-      colour: "#A679BD",
+      colour: "#f46d43",
       contents: [
         {
           kind: "block",
@@ -131,7 +131,7 @@ const toolboxCategories = {
     {
       kind: "category",
       name: "Math",
-      colour: "#5CA65C",
+      colour: "#fdae61",
       contents: [
         {
           kind: "block",
@@ -198,7 +198,7 @@ const toolboxCategories = {
     {
       kind: "category",
       name: "Lists",
-      colour: "#745BA5",
+      colour: "#fee08b",
       contents: [
         {
           kind: "block",
@@ -253,13 +253,13 @@ const toolboxCategories = {
     {
       kind: "category",
       name: "Variables",
-      colour: "#FF8C1A",
+      colour: "#e6f598",
       custom: "VARIABLE",
     },
     {
       kind: "category",
       name: "Functions",
-      colour: "#9A5CA6",
+      colour: "#abdda4",
       contents: [
         {
           kind: "block",
@@ -294,7 +294,7 @@ const toolboxCategories = {
     {
       kind: "category",
       name: "Base",
-      color: 210,
+      colour: "#66c2a5",
       contents: [
         {
           kind: "block",
@@ -329,7 +329,7 @@ const toolboxCategories = {
     {
       kind: "category",
       name: "Serial",
-      color: 210,
+      colour: "#3288bd",
       contents: [
         {
           kind: "block",
