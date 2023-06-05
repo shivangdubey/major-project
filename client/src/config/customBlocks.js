@@ -264,6 +264,29 @@ pythonGenerator["arduinoTone"] = function (block) {
   return `board.digital[${pin}].write(1)\nboard.digital[${pin}].mode = pyfirmata.PWM\nboard.digital[${pin}].write({ frequency: ${frequency}, duty_cycle: 0.5, duration: ${duration} })\n`;
 };
 
+// Define the custom block for time delay using pyFirmata
+Blockly.Blocks["timeDelay"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Delay for")
+      .appendField(new Blockly.FieldNumber(1, 0), "DELAY")
+      .appendField("second(s)");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#66c2a5");
+    this.setTooltip("Delay execution for a specific amount of time");
+    this.setHelpUrl("");
+  },
+};
+
+// Define the generator function for the time delay custom block
+pythonGenerator["timeDelay"] = function (block) {
+  const delay = block.getFieldValue("DELAY");
+
+  // Generate the code for time delay
+  return "time.sleep(" + delay + ")\n";
+};
+
 // Define the custom block for initializing serial communication on a board
 Blockly.Blocks["boardSerialInit"] = {
   init: function () {
@@ -273,7 +296,7 @@ Blockly.Blocks["boardSerialInit"] = {
       .appendField(new Blockly.FieldNumber(9600, 0), "BAUD_RATE");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#66c2a5");
+    this.setColour("#3288bd");
     this.setTooltip("Initialize serial communication on the board");
     this.setHelpUrl("");
   },
@@ -293,7 +316,7 @@ Blockly.Blocks["boardSerialPrint"] = {
     this.appendValueInput("DATA").setCheck(null).appendField("Serial Print");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#66c2a5");
+    this.setColour("#3288bd");
     this.setTooltip("Print data to the serial monitor");
     this.setHelpUrl("");
   },
@@ -316,7 +339,7 @@ Blockly.Blocks["boardSerialAvailable"] = {
   init: function () {
     this.appendDummyInput().appendField("Serial Data Available");
     this.setOutput(true, "Boolean");
-    this.setColour("#66c2a5");
+    this.setColour("#3288bd");
     this.setTooltip("Check if there is data available in the serial buffer");
     this.setHelpUrl("");
   },
@@ -333,7 +356,7 @@ Blockly.Blocks["boardSerialRead"] = {
   init: function () {
     this.setOutput(true, null);
     this.appendDummyInput().appendField("Serial Read");
-    this.setColour("#66c2a5");
+    this.setColour("#3288bd");
     this.setTooltip("Read data from the serial monitor");
     this.setHelpUrl("");
   },
@@ -351,7 +374,7 @@ Blockly.Blocks["boardSerialReadStringUntil"] = {
       .appendField("Serial Read String Until")
       .appendField(new Blockly.FieldTextInput(""), "DELIMITER");
     this.setOutput(true, null);
-    this.setColour("#66c2a5");
+    this.setColour("#3288bd");
     this.setTooltip(
       "Reads a string from the serial port until the specified delimiter is found"
     );
@@ -375,7 +398,7 @@ Blockly.Blocks["boardSerialFlush"] = {
     this.appendDummyInput().appendField("Flush Serial Port");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#66c2a5");
+    this.setColour("#3288bd");
     this.setTooltip("Flushes the serial port to remove any remaining data");
     this.setHelpUrl("");
   },

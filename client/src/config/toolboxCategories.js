@@ -298,6 +298,9 @@ const toolboxCategories = {
       contents: [
         {
           kind: "block",
+          type: "timeDelay",
+        },{
+          kind: "block",
           type: "arduinoBuiltInLed",
         },
         {
