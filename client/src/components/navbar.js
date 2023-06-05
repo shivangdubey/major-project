@@ -103,89 +103,89 @@ const Navbar = () => {
           Console
         </Link>
       </div>
-      <div
-        ref={connectButtonRef}
-        className="navbar-button-connect"
-        onClick={handleConnectClick}
-      >
-        <FaLink className="navbar-button-connect-icon" /> Connect
-      </div>
-      {showPopup && (
-        <div className="popup">
-          <div className="popup-options">
-            <div
-              className="popup-option"
-              onClick={() => handleBluetoothClick()}
-              ref={bluetoothButtonRef}
-            >
-              <FaBluetooth className="popup-option-icon" /> Bluetooth
-            </div>
-            {showPopup && showBluetoothPopup && (
-              <div className="popup-network" ref={popupRef}>
-                <label htmlFor="address" className="popup-network-label">
-                  Address
-                </label>
-                <input
-                  type="text"
-                  className="popup-network-input"
-                  id="address"
-                  value={bluetoothAddress}
-                  onChange={(e) => setBluetoothAddress(e.target.value)}
-                />
-                <div
-                  className="popup-network-scan"
-                  onClick={handleBluetoothConnectClick}
-                >
-                  <FaLink className="popup-network-scan-icon" /> Connect Device
-                </div>
-              </div>
-            )}
-            <div className="popup-option" onClick={() => handleSerialClick()}>
-              <FaSitemap className="popup-option-icon" /> Serial
-            </div>
-            <div
-              ref={networkButtonRef}
-              className="popup-option"
-              onClick={handleNetworkOptionClick}
-            >
-              <FaNetworkWired className="popup-option-icon" /> Network
-            </div>
-            {showPopup && showNetworkPopup && (
-              <div className="popup-network" ref={popupRef}>
-                <label htmlFor="address" className="popup-network-label">
-                  Address
-                </label>
-                <input
-                  type="text"
-                  className="popup-network-input"
-                  id="address"
-                  value={address}
-                  onChange={(e) => setAddress(e.target.value)}
-                />
-                <label htmlFor="password" className="popup-network-label">
-                  Password
-                </label>
-                <div className="popup-network-password">
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    className="popup-network-password-input"
-                    id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                  <FaEye
-                    className="popup-network-password-icon"
-                    onClick={handlePasswordToggle}
-                  />
-                </div>
-                <div className="popup-network-scan" onClick={handleScanClick}>
-                  <FaSearch className="popup-network-scan-icon" /> Scan Devices
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+      {/*<div*/}
+      {/*  ref={connectButtonRef}*/}
+      {/*  className="navbar-button-connect"*/}
+      {/*  onClick={handleConnectClick}*/}
+      {/*>*/}
+      {/*  <FaLink className="navbar-button-connect-icon" /> Connect*/}
+      {/*</div>*/}
+      {/*{showPopup && (*/}
+      {/*  <div className="popup">*/}
+      {/*    <div className="popup-options">*/}
+      {/*      <div*/}
+      {/*        className="popup-option"*/}
+      {/*        onClick={() => handleBluetoothClick()}*/}
+      {/*        ref={bluetoothButtonRef}*/}
+      {/*      >*/}
+      {/*        <FaBluetooth className="popup-option-icon" /> Bluetooth*/}
+      {/*      </div>*/}
+      {/*      {showPopup && showBluetoothPopup && (*/}
+      {/*        <div className="popup-network" ref={popupRef}>*/}
+      {/*          <label htmlFor="address" className="popup-network-label">*/}
+      {/*            Address*/}
+      {/*          </label>*/}
+      {/*          <input*/}
+      {/*            type="text"*/}
+      {/*            className="popup-network-input"*/}
+      {/*            id="address"*/}
+      {/*            value={bluetoothAddress}*/}
+      {/*            onChange={(e) => setBluetoothAddress(e.target.value)}*/}
+      {/*          />*/}
+      {/*          <div*/}
+      {/*            className="popup-network-scan"*/}
+      {/*            onClick={handleBluetoothConnectClick}*/}
+      {/*          >*/}
+      {/*            <FaLink className="popup-network-scan-icon" /> Connect Device*/}
+      {/*          </div>*/}
+      {/*        </div>*/}
+      {/*      )}*/}
+      {/*      <div className="popup-option" onClick={() => handleSerialClick()}>*/}
+      {/*        <FaSitemap className="popup-option-icon" /> Serial*/}
+      {/*      </div>*/}
+      {/*      <div*/}
+      {/*        ref={networkButtonRef}*/}
+      {/*        className="popup-option"*/}
+      {/*        onClick={handleNetworkOptionClick}*/}
+      {/*      >*/}
+      {/*        <FaNetworkWired className="popup-option-icon" /> Network*/}
+      {/*      </div>*/}
+      {/*      {showPopup && showNetworkPopup && (*/}
+      {/*        <div className="popup-network" ref={popupRef}>*/}
+      {/*          <label htmlFor="address" className="popup-network-label">*/}
+      {/*            Address*/}
+      {/*          </label>*/}
+      {/*          <input*/}
+      {/*            type="text"*/}
+      {/*            className="popup-network-input"*/}
+      {/*            id="address"*/}
+      {/*            value={address}*/}
+      {/*            onChange={(e) => setAddress(e.target.value)}*/}
+      {/*          />*/}
+      {/*          <label htmlFor="password" className="popup-network-label">*/}
+      {/*            Password*/}
+      {/*          </label>*/}
+      {/*          <div className="popup-network-password">*/}
+      {/*            <input*/}
+      {/*              type={showPassword ? "text" : "password"}*/}
+      {/*              className="popup-network-password-input"*/}
+      {/*              id="password"*/}
+      {/*              value={password}*/}
+      {/*              onChange={(e) => setPassword(e.target.value)}*/}
+      {/*            />*/}
+      {/*            <FaEye*/}
+      {/*              className="popup-network-password-icon"*/}
+      {/*              onClick={handlePasswordToggle}*/}
+      {/*            />*/}
+      {/*          </div>*/}
+      {/*          <div className="popup-network-scan" onClick={handleScanClick}>*/}
+      {/*            <FaSearch className="popup-network-scan-icon" /> Scan Devices*/}
+      {/*          </div>*/}
+      {/*        </div>*/}
+      {/*      )}*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*)}*/}
     </div>
   );
 };
