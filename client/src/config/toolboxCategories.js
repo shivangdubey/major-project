@@ -364,11 +364,15 @@ const toolboxCategories = {
     {
       kind: "category",
       name: "Servo",
-      colour: "#3288bd",
+      colour: "#5e4fa2",
       contents: [
         {
           kind: "block",
           type: "servoMove",
+        },
+        {
+          kind: "block",
+          type: "servoReadDegrees",
         },
       ],
     },

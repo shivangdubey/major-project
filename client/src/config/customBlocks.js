@@ -421,7 +421,7 @@ Blockly.Blocks["servoMove"] = {
             .appendField(new Blockly.FieldTextInput("90"), "ANGLE");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setColour("#66c2a5");
+        this.setColour("#5e4fa2");
         this.setTooltip("Control a servo motor using PyFirmata");
         this.setHelpUrl("");
     },
@@ -435,3 +435,22 @@ pythonGenerator["servoMove"] = function (block) {
     // Move the servo motor
     return "board.digital[" + pin + "].write(" + angle + ")\n";
 };
+
+// Define the custom block for reading servo degrees using PyFirmata
+Blockly.Blocks["servoReadDegrees"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("Read Servo Degrees");
+        this.setOutput(true, "Number");
+        this.setColour("#5e4fa2");
+        this.setTooltip("Read the degrees of a servo using PyFirmata");
+        this.setHelpUrl("");
+    },
+};
+
+// Define the generator function for the custom block
+pythonGenerator["servoReadDegrees"] = function (block) {
+    // Read the servo degrees
+    return "servo.read()\n";
+};
+
