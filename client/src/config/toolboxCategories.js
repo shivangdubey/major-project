@@ -3,6 +3,9 @@ import "./customBlocks";
 const toolboxCategories = {
   kind: "categoryToolbox",
   contents: [
+    { kind: "sep" },
+    { kind: "category", name: "Basic" },
+    { kind: "sep" },
     {
       kind: "category",
       name: "Logic",
@@ -291,6 +294,9 @@ const toolboxCategories = {
         },
       ],
     },
+    { kind: "sep" },
+    { kind: "category", name: "Arduino" },
+    { kind: "sep" },
     {
       kind: "category",
       name: "Base",

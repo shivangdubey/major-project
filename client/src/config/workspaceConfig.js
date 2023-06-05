@@ -26,7 +26,7 @@ const blocklyConfig = {
   },
   trashcan: false,
   theme: {
-    base: Blockly.Themes.Classic,
+    base: Blockly.Themes.Zelos,
     componentStyles: {
       workspaceBackgroundColour: "#f2f2f2",
       toolboxBackgroundColour: "#2e2e2e",
@@ -39,6 +39,8 @@ const blocklyConfig = {
     },
     fontStyle: { family: "Georgia, serif", weight: "bold", size: 12 },
     startHats: true,
+    comments: false,
+    sounds: false,
   },
 };
 
