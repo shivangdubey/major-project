@@ -408,3 +408,30 @@ pythonGenerator["boardSerialFlush"] = function (block) {
   // Flush the serial port
   return "board.serial.flush()\n";
 };
+
+
+// Define the custom block for controlling a servo motor with PyFirmata
+Blockly.Blocks["servoMove"] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("Move Servo Motor")
+            .appendField("Pin:")
+            .appendField(new Blockly.FieldTextInput("9"), "PIN")
+            .appendField("Angle:")
+            .appendField(new Blockly.FieldTextInput("90"), "ANGLE");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour("#66c2a5");
+        this.setTooltip("Control a servo motor using PyFirmata");
+        this.setHelpUrl("");
+    },
+};
+
+// Define the generator function for the custom block
+pythonGenerator["servoMove"] = function (block) {
+    const pin = block.getFieldValue("PIN");
+    const angle = block.getFieldValue("ANGLE");
+
+    // Move the servo motor
+    return "board.digital[" + pin + "].write(" + angle + ")\n";
+};
