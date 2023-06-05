@@ -30,7 +30,7 @@ module.exports = {
       res.json({
         code: status.SUCCESSFUL,
         status: true,
-        resp: resp.length > 0 ? resp : "OK",
+        resp: resp.length > 0 ? resp : ["OK"],
       });
     } catch (e) {
       console.error(e);
@@ -76,7 +76,7 @@ module.exports = {
     });
 
     // Send commands to the terminal
-    terminal.stdin.write("cd raspberryPi3B\n");
+    terminal.stdin.write("cd arduino\n");
     terminal.stdin.write(command + "\n");
 
     // Terminate the terminal process
