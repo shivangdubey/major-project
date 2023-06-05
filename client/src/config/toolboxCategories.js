@@ -339,6 +339,22 @@ const toolboxCategories = {
           kind: "block",
           type: "boardSerialPrint",
         },
+        {
+          kind: "block",
+          type: "boardSerialAvailable",
+        },
+        {
+          kind: "block",
+          type: "boardSerialRead",
+        },
+        {
+          kind: "block",
+          type: "boardSerialReadStringUntil",
+        },
+        {
+          kind: "block",
+          type: "boardSerialFlush",
+        },
       ],
     },
   ],

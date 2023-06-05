@@ -266,49 +266,122 @@ pythonGenerator["arduinoTone"] = function (block) {
 
 // Define the custom block for initializing serial communication on a board
 Blockly.Blocks["boardSerialInit"] = {
-    init: function () {
-        this.appendDummyInput()
-            .appendField("Initialize Serial Communication")
-            .appendField("Baud Rate")
-            .appendField(
-                new Blockly.FieldNumber(9600, 0),
-                "BAUD_RATE"
-            );
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
-        this.setColour("#66c2a5");
-        this.setTooltip("Initialize serial communication on the board");
-        this.setHelpUrl("");
-    },
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Initialize Serial Communication")
+      .appendField("Baud Rate")
+      .appendField(new Blockly.FieldNumber(9600, 0), "BAUD_RATE");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#66c2a5");
+    this.setTooltip("Initialize serial communication on the board");
+    this.setHelpUrl("");
+  },
 };
 
 // Define the generator function for the custom block
 pythonGenerator["boardSerialInit"] = function (block) {
-    const baudRate = block.getFieldValue("BAUD_RATE");
+  const baudRate = block.getFieldValue("BAUD_RATE");
 
-    // Initialize the serial communication with the specified baud rate
-    return "board.serial_init(" + baudRate + ")\n";
+  // Initialize the serial communication with the specified baud rate
+  return "board.serial_init(" + baudRate + ")\n";
 };
-
 
 // Define the custom block for serial printing
 Blockly.Blocks["boardSerialPrint"] = {
-    init: function () {
-        this.appendValueInput("DATA")
-            .setCheck(null)
-            .appendField("Serial Print");
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
-        this.setColour("#66c2a5");
-        this.setTooltip("Print data to the serial monitor");
-        this.setHelpUrl("");
-    },
+  init: function () {
+    this.appendValueInput("DATA").setCheck(null).appendField("Serial Print");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#66c2a5");
+    this.setTooltip("Print data to the serial monitor");
+    this.setHelpUrl("");
+  },
 };
 
 // Define the generator function for the custom block
 pythonGenerator["boardSerialPrint"] = function (block) {
-    const data = pythonGenerator.valueToCode(block, "DATA", pythonGenerator.ORDER_ATOMIC);
+  const data = pythonGenerator.valueToCode(
+    block,
+    "DATA",
+    pythonGenerator.ORDER_ATOMIC
+  );
 
-    // Generate the code for serial printing
-    return "board.serial_print(" + data + ")\n";
+  // Generate the code for serial printing
+  return "board.serial_print(" + data + ")\n";
+};
+
+// Define the custom block for checking serial data availability
+Blockly.Blocks["boardSerialAvailable"] = {
+  init: function () {
+    this.appendDummyInput().appendField("Serial Data Available");
+    this.setOutput(true, "Boolean");
+    this.setColour("#66c2a5");
+    this.setTooltip("Check if there is data available in the serial buffer");
+    this.setHelpUrl("");
+  },
+};
+
+// Define the generator function for the custom block
+pythonGenerator["boardSerialAvailable"] = function (block) {
+  // Check for serial data availability
+  return ["board.serial.available()", pythonGenerator.ORDER_ATOMIC];
+};
+
+// Define the custom block for serial reading
+Blockly.Blocks["boardSerialRead"] = {
+  init: function () {
+    this.setOutput(true, null);
+    this.appendDummyInput().appendField("Serial Read");
+    this.setColour("#66c2a5");
+    this.setTooltip("Read data from the serial monitor");
+    this.setHelpUrl("");
+  },
+};
+
+// Define the generator function for the custom block
+pythonGenerator["boardSerialRead"] = function (block) {
+  // Generate the code for serial reading
+  return ["board.serial.read()", pythonGenerator.ORDER_ATOMIC];
+};
+
+Blockly.Blocks["boardSerialReadStringUntil"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Serial Read String Until")
+      .appendField(new Blockly.FieldTextInput(""), "DELIMITER");
+    this.setOutput(true, null);
+    this.setColour("#66c2a5");
+    this.setTooltip(
+      "Reads a string from the serial port until the specified delimiter is found"
+    );
+    this.setHelpUrl("");
+  },
+};
+
+pythonGenerator["boardSerialReadStringUntil"] = function (block) {
+  const delimiter = block.getFieldValue("DELIMITER");
+
+  // Read string from serial port until the specified delimiter
+  return [
+    "board.serial.readStringUntil('" + delimiter + "')\n",
+    pythonGenerator.ORDER_ATOMIC,
+  ];
+};
+
+// Define the custom block for flushing the serial port
+Blockly.Blocks["boardSerialFlush"] = {
+  init: function () {
+    this.appendDummyInput().appendField("Flush Serial Port");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#66c2a5");
+    this.setTooltip("Flushes the serial port to remove any remaining data");
+    this.setHelpUrl("");
+  },
+};
+
+pythonGenerator["boardSerialFlush"] = function (block) {
+  // Flush the serial port
+  return "board.serial.flush()\n";
 };
