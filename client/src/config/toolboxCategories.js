@@ -299,7 +299,8 @@ const toolboxCategories = {
         {
           kind: "block",
           type: "timeDelay",
-        },{
+        },
+        {
           kind: "block",
           type: "arduinoBuiltInLed",
         },
@@ -357,6 +358,17 @@ const toolboxCategories = {
         {
           kind: "block",
           type: "boardSerialFlush",
+        },
+      ],
+    },
+    {
+      kind: "category",
+      name: "Servo",
+      colour: "#3288bd",
+      contents: [
+        {
+          kind: "block",
+          type: "servoMove",
         },
       ],
     },
